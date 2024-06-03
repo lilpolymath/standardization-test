@@ -1,0 +1,70 @@
+.cta {
+  background-image: url("../assets/CTA-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  place-content: center;
+}
+.cta .wrapper {
+  padding: 160px 0 112px;
+}
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.ctaContent h6 {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--primary-color);
+}
+.ctaContent h2 {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+}
+.ctaContent p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.ctaContent h5 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  color: #23856d;
+}
+.ctaContent button {
+  padding: 15px 40px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: transparent;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .cta .wrapper {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}

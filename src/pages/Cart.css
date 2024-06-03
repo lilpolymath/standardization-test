@@ -1,0 +1,343 @@
+.product-hero {
+  background-color: #fafafa;
+}
+.product-hero header {
+  padding: 24px 0;
+}
+.product-hero header p {
+  max-width: 1033px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  color: #bdbdbd;
+}
+.home {
+  color: var(--text-color);
+}
+.product-hero .wrapper {
+  display: flex;
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.product-info .wrapper {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+
+hr {
+  border-bottom: 1px solid #ececec;
+}
+.product-info nav button {
+  padding: 24px;
+  background: transparent;
+  border: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.product-info .info-wrapper {
+  display: flex;
+  gap: 125px;
+  padding: 24px 0 48px;
+}
+.info,
+.image {
+  flex: 1;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.info p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+.image img {
+  width: 100%;
+}
+.left {
+  flex: 1;
+  padding: 24px;
+  background-color: #fff;
+}
+.left h4 {
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.6px;
+  text-align: left;
+}
+.cart-header {
+  background-color: #3b4148;
+  color: #fff;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 244px 152px 81px;
+  padding: 16px 24px;
+  justify-items: flex-start;
+  justify-content: center;
+}
+.cart-item {
+  border-bottom: 1px solid #dcdcdc;
+}
+.item-info {
+  display: grid;
+  grid-template-columns: 244px 152px 81px;
+  justify-items: start;
+  padding: 32px 0 22px;
+  gap: 40px;
+  align-items: center;
+}
+.details {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.details .price,
+.details .counter {
+  display: none;
+}
+.details img {
+  width: 100px;
+  object-fit: contain;
+}
+.details h2 {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.63px;
+  letter-spacing: 0.004em;
+  text-align: left;
+}
+.details p {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.004em;
+  text-align: left;
+  color: var(--success-color);
+}
+.details .rating {
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 9.6px;
+  letter-spacing: 0.004em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.counter {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+.counter .button {
+  border: transparent;
+  border-radius: 50%;
+  background: #e8eaec;
+  height: 28px;
+  width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.price p:first-child {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+  letter-spacing: 0.002em;
+  text-align: left;
+}
+.price p:nth-child(2) {
+  font-family: Montserrat;
+  font-size: 10.25px;
+  font-weight: 400;
+  line-height: 14.35px;
+  letter-spacing: 0.002em;
+  text-align: left;
+}
+.delete-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Lato;
+  color: var(--primary-color);
+  border: none;
+  background: transparent;
+  gap: 4px;
+}
+.right {
+  flex: 1;
+  background-color: #fff;
+  padding: 32px;
+}
+.right div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right div h4 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+}
+.right div:not(:last-child),
+.right div:not(:first-child) {
+  border-bottom: 1px solid #dcdcdc;
+}
+.right div:nth-child(2) {
+  padding: 39px 0;
+}
+.right div:nth-child(2) p {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.004em;
+  text-align: right;
+  max-width: 127px;
+  color: #f56666;
+}
+.right div:nth-child(3) {
+  padding: 24px 0;
+}
+.right div:nth-child(4) {
+  padding: 32px 0;
+}
+.right div:nth-child(5) {
+  padding: 8px 0 32px;
+  flex-direction: column;
+  gap: 34px;
+}
+.productReview {
+  display: flex;
+  gap: 8px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+.filled path {
+  fill: #f3cd03;
+}
+.productRating {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+}
+.productPrice {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.availability {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin-bottom: 32px;
+  color: var(--secondary-text-color);
+}
+.availability span {
+  color: var(--primary-color);
+}
+.description {
+  text-align: left;
+  visibility: hidden;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  color: #858585;
+}
+.right hr {
+  margin: 16px 0 30px;
+}
+
+.products-section {
+  background-color: #fafafa;
+}
+.products-section h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.products-section hr {
+  margin: 24px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .product-hero header p {
+    text-align: center;
+  }
+  .product-hero {
+    padding: 48px 33px;
+  }
+  .product-hero .wrapper,
+  .product-info .wrapper,
+  .info-wrapper,
+  .brands {
+    flex-direction: column;
+  }
+  .product-info,
+  .products-section {
+    display: none;
+  }
+  .description {
+    visibility: visible;
+  }
+  .details .price,
+  .details.counter {
+    display: block;
+  }
+  .price {
+    display: none;
+  }
+  .counter {
+    display: none;
+  }
+}

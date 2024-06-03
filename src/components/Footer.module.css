@@ -1,0 +1,123 @@
+.footerTop {
+  background-color: #fafafa;
+  padding: 44px;
+}
+.footerTop .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.footerTop h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.footerTop .social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.social a svg {
+  width: 24px;
+  height: 24px;
+}
+.social a svg path {
+  fill: #23a6f0;
+}
+.footerMiddle {
+  padding: 44px;
+}
+.footerMiddle .wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  justify-items: flex-start;
+}
+.footerMiddle h6 {
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.footerMiddle p {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.links a {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+.contactForm {
+  display: inline-flex;
+}
+input {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.20000000298023224px;
+  padding: 15px 20px;
+  border: 1px solid #e6e6e6;
+}
+input[type="text"] {
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  background-color: #f9f9f9;
+  color: var(--secondary-text-color);
+}
+input[type="submit"] {
+  text-align: center;
+  background-color: #23a6f0;
+  color: #fff;
+}
+.footerBottom {
+  background-color: #fafafa;
+  padding: 44px;
+}
+.footerBottom p {
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .footerTop .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .footerMiddle .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .footerBottom p {
+    text-align: center;
+  }
+}
