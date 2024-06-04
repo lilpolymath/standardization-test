@@ -4,7 +4,7 @@ import Services from "../components/Services";
 import Blog from "../components/Blog";
 import Testimonial from "../components/Testimonial";
 import CTA from "../components/CTA";
-import "./Home.css";
+
 const Home = () => {
   return (
     <main className="home-container">

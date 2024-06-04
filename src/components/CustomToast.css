@@ -1,15 +1,16 @@
-.custom-toast {
+/* .custom-toast {
   display: flex;
   align-items: center;
   padding: 16px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .custom-toast-content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .custom-toast h3 {
@@ -39,4 +40,5 @@
 .custom-toast-product p:nth-child(2) {
   font-weight: bold;
   font-size: 16px;
+  text-align: left;
 }

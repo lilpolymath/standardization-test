@@ -106,7 +106,7 @@
 }
 
 .iconButton svg path {
-  fill: black;
+  fill: var(--text-color);
 }
 .productInfo {
   height: 182px;

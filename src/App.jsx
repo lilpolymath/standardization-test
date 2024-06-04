@@ -8,6 +8,7 @@ import Error from "./pages/Error";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </Provider>
   );
 }

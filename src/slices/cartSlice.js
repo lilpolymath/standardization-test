@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast, Slide } from "react-toastify";
-import CustomToast from "../components/CustomToast";
 
 // Helper function to load state from local storage
 const loadState = () => {
@@ -39,15 +37,6 @@ const cartSlice = createSlice({
       }
       state.totalPrice += item.price * item.quantity;
       saveState(state);
-      // toast(<CustomToast product={item} />, {
-      //   position: "top-right",
-      //   autoClose: 5000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      // });
     },
     removeFromCart: (state, action) => {
       const index = state.items.findIndex(
@@ -58,7 +47,6 @@ const cartSlice = createSlice({
           state.items[index].price * state.items[index].quantity;
         state.items.splice(index, 1);
         saveState(state);
-        toast.info("Item removed from cart");
       }
     },
     incrementQuantity: (state, action) => {

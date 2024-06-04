@@ -48,6 +48,7 @@ hr {
   gap: 16px;
   padding: 24px;
   background-color: #fff;
+  height: 100%;
 }
 .cart-hero .left h4 {
   text-align: left;
@@ -66,6 +67,22 @@ hr {
   padding: 16px 24px;
   justify-items: flex-start;
   justify-content: center;
+}
+.empty-cart {
+  display: flex;
+  place-content: center;
+  padding: 60px 24px;
+}
+.empty-cart p {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+.cart-items {
+  height: 100%;
+  max-height: 600px;
+  overflow-y: auto;
 }
 .cart-item {
   border-bottom: 1px solid #dcdcdc;
@@ -173,6 +190,7 @@ hr {
   flex: 1;
   background-color: #fff;
   padding: 32px;
+  height: fit-content;
 }
 .cart-hero .right div {
   display: flex;

@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 import PropTypes from "prop-types";
 import styles from "./Products.module.css";
 
-function ProductsList({ classname = "", limit = 10 }) {
+function ProductsList({ limit = 10 }) {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.product);
   const { data } = useGetProductsQuery({ limit });
@@ -18,7 +18,7 @@ function ProductsList({ classname = "", limit = 10 }) {
   }, [data, dispatch]);
 
   return (
-    <div className={`${styles.productsGrid} ${classname}`}>
+    <div className={styles.productsGrid}>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
@@ -27,6 +27,5 @@ function ProductsList({ classname = "", limit = 10 }) {
 }
 export default ProductsList;
 ProductsList.propTypes = {
-  classname: PropTypes.string,
   limit: PropTypes.any,
 };

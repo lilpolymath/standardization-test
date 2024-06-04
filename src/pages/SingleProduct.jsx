@@ -5,7 +5,14 @@ import { addToCart } from "../slices/cartSlice";
 import { useGetProductByIdQuery } from "../services/api";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Cart, Eye, Love, Star } from "../components/Icons";
+import {
+  Cart,
+  ChevronLeft,
+  ChevronRight,
+  Eye,
+  Love,
+  Star,
+} from "../components/Icons";
 import { images } from "../constants";
 import ProductsList from "../components/ProductsList";
 import { range } from "../utils";
@@ -15,13 +22,7 @@ import IconButton from "../components/IconButton";
 const SingleProduct = () => {
   const { id } = useParams();
   const { data: product } = useGetProductByIdQuery(id);
-  // if (isLoading) {
-  //   return <p>Loading...</p>;
-  // }
 
-  // if (error) {
-  //   return <p>Error loading product</p>;
-  // }
   const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
@@ -44,6 +45,28 @@ const SingleProduct = () => {
                   showIndicators={false}
                   showStatus={false}
                   showArrows={true}
+                  renderArrowPrev={(onClickHandler, hasPrev) =>
+                    hasPrev && (
+                      <button
+                        type="button"
+                        onClick={onClickHandler}
+                        className="arrow-styles prev"
+                      >
+                        <ChevronLeft />
+                      </button>
+                    )
+                  }
+                  renderArrowNext={(onClickHandler, hasNext) =>
+                    hasNext && (
+                      <button
+                        type="button"
+                        onClick={onClickHandler}
+                        className="arrow-styles next"
+                      >
+                        <ChevronRight />
+                      </button>
+                    )
+                  }
                 >
                   <img src={product.images[0]} alt={product.title} />
                   <img src={product.thumbnail} alt={product.title} />
@@ -140,7 +163,7 @@ const SingleProduct = () => {
       <section className="products-section">
         <h3>BESTSELLER PRODUCTS</h3>
         <hr />
-        <ProductsList classname="four" limit={8} />
+        <ProductsList limit={8} />
         <div className="brands">
           <img src={images.brand1} alt="" />
           <img src={images.brand2} alt="" />

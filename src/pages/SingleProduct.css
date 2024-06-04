@@ -81,6 +81,23 @@ hr {
 .product-hero .left {
   flex: 1;
 }
+.arrow-styles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  border: none;
+  z-index: 2;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.arrow-styles svg path {
+  fill: #858585;
+}
 .right {
   flex: 1;
 }

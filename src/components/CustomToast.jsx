@@ -7,7 +7,7 @@ const CustomToast = ({ product }) => {
       <div className="custom-toast-content">
         <h3>Successfully added to basket</h3>
         <div className="custom-toast-product">
-          <img src={product.thumbnail} alt={product.title} />
+          <img src={product.images[0]} alt={product.title} />
           <div>
             <p>{product.title}</p>
             <p>€ {product.price.toFixed(2)}</p>

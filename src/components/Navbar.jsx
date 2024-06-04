@@ -57,19 +57,25 @@ const Navbar = () => {
       </div>
       <div className={`${styles.navbarSection} ${styles.lightSection}`}>
         <div className={styles.navbarContent}>
-          <h3 className={styles.brandName}>Bandage</h3>
+          <Link className={styles.brandName} to="/">
+            Bandage
+          </Link>
           <div className={styles.navigationContainer}>
             <nav className={styles.mainNavigation}>
-              <a className={styles.navLink}>Home</a>
+              <Link className={styles.navLink} to="/">
+                Home
+              </Link>
               <select name="shop" id="shop-select" className={styles.navSelect}>
                 <option value="">Shop</option>
               </select>
-              <a className={styles.navLink}>About</a>
-              <a className={styles.navLink}>Contact</a>
-              <a className={styles.navLink}>Pages</a>
+              <p className={styles.navLink}>About</p>
+              <Link to="#" className={styles.navLink}>
+                Contact
+              </Link>
+              <p className={styles.navLink}>Pages</p>
             </nav>
             <div className={styles.links}>
-              <a href="" className={styles.navActionLink}>
+              <a href="#" className={styles.navActionLink}>
                 <Auth /> Login / Register
               </a>
               <a href="#" className={styles.navActionLink}>
@@ -79,7 +85,7 @@ const Navbar = () => {
                 <Cart />
                 {itemCount}
               </Link>
-              <a href="" className={styles.navActionLink}>
+              <a href="#" className={styles.navActionLink}>
                 <Love />
               </a>
             </div>
@@ -95,7 +101,7 @@ const Navbar = () => {
                   setIsOpen(!isOpen);
                 }}
               >
-                <Hamburger />{" "}
+                <Hamburger />
               </button>
             </div>
           </div>
@@ -103,9 +109,9 @@ const Navbar = () => {
 
         <ul className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
           <li>
-            <a href="" className={styles.navLink}>
+            <Link to="/" className={styles.navLink}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a href="" className={styles.navLink}>

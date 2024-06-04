@@ -5,12 +5,24 @@ import { addToCart } from "../slices/cartSlice";
 import PropTypes from "prop-types";
 import { Compare, Love, Star } from "./Icons";
 import { range } from "../utils";
+import { toast, Slide } from "react-toastify";
+import CustomToast from "../components/CustomToast";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
     dispatch(addToCart({ ...product, quantity: 1 }));
+    toast(<CustomToast product={product} />, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      transition: Slide,
+    });
   };
   let discount = (product.price * product.discountPercentage) / 100;
   discount = discount.toFixed(2);
