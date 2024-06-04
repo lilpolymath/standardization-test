@@ -9,7 +9,6 @@ import {
 } from "../slices/cartSlice";
 import { range } from "../utils";
 import { Delete, Star } from "../components/Icons";
-import IconButton from "../components/IconButton";
 import Button from "../components/Button";
 import { images } from "../constants";
 
@@ -26,7 +25,8 @@ const Cart = () => {
     <main>
       <ShoppingCart />
       <section className="products-section">
-        <h3>BESTSELLER PRODUCTS</h3>
+        <h3>PRODUCTS RELATED TO ITEMS IN YOUR CART</h3>
+        <hr />
         <ProductsList classname="four" limit={8} />
       </section>
     </main>
@@ -52,7 +52,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <section className="product-hero">
+    <section className="cart-hero">
       <header>
         <p>
           <span className="home">Home</span> &gt; Shop &gt; Shopping Cart
@@ -76,9 +76,9 @@ const ShoppingCart = () => {
                       <h2>{item.title}</h2>
                       <div className="price">
                         {" "}
-                        <p>${item.price * item.quantity}</p>
+                        <p>&#8358;{item.price * item.quantity}</p>
                         <p>
-                          {item.price} x {item.quantity} Items
+                          &#8358;{item.price} x {item.quantity} Items
                         </p>
                       </div>
                       <p>{item.availabilityStatus}</p>
@@ -98,40 +98,34 @@ const ShoppingCart = () => {
                         {item.reviews.length} Reviews
                       </div>
                     </div>
-                    <div className="counter">
-                      <IconButton onClick={() => handleDecrement(item)}>
-                        -
-                      </IconButton>
-                      <span>{item.quantity}</span>
-                      <IconButton onClick={() => handleIncrement(item)}>
-                        +
-                      </IconButton>
-                    </div>
                   </div>
                   <div className="counter">
-                    <IconButton onClick={() => handleDecrement(item)}>
-                      -
-                    </IconButton>
+                    <button onClick={() => handleDecrement(item)}>-</button>
                     <span>{item.quantity}</span>
-                    <IconButton onClick={() => handleIncrement(item)}>
-                      +
-                    </IconButton>
+                    <button onClick={() => handleIncrement(item)}>+</button>
                   </div>
                   <div className="price">
                     {" "}
-                    <p>${item.price * item.quantity}</p>
+                    <p>&#8358;{item.price * item.quantity}</p>
                     <p>
-                      {item.price} x {item.quantity} Items
+                      &#8358;{item.price} x {item.quantity} Items
                     </p>
                   </div>
                 </div>
-                <button
-                  className="delete-btn"
-                  onClick={() => handleRemoveFromCart(item)}
-                >
-                  <Delete />
-                  REMOVE
-                </button>
+                <div className="delete-btn">
+                  <button
+                    className="btn"
+                    onClick={() => handleRemoveFromCart(item)}
+                  >
+                    <Delete />
+                    REMOVE
+                  </button>
+                  <div className="counter">
+                    <button onClick={() => handleDecrement(item)}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => handleIncrement(item)}>+</button>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

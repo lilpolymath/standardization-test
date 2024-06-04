@@ -78,7 +78,7 @@ hr {
 .image img {
   width: 100%;
 }
-.left {
+.product-hero .left {
   flex: 1;
 }
 .right {
@@ -175,6 +175,7 @@ hr {
 }
 .products-section {
   background-color: #fafafa;
+  padding: 48px 0;
 }
 .products-section h3 {
   font-family: Montserrat;
@@ -187,7 +188,8 @@ hr {
   margin: 0 auto;
 }
 .products-section hr {
-  margin: 24px 0;
+  margin: 24px auto;
+  max-width: 1040px;
 }
 .brands {
   display: flex;
